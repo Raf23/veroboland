@@ -29,13 +29,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
-iframe {
-	overflow: scroll;
-	width: 800px;
-	height: 600px
-	border: 1px solid black;
-}
-
 body {
 	line-height: 1;
 }
@@ -4695,4 +4688,28 @@ input, select, textarea {
 			visibility: visible;
 		}
 
+	}
+
+	@media only screen and (max-width: 767px) {
+		/* Pour les écrans plus petits que 768px de largeur */
+		iframe {
+			width: 100%;
+			height: 400px;
+		}
+	}
+
+	@media only screen and (min-width: 768px) and (max-width: 991px) {
+		/* Pour les écrans entre 768px et 991px de largeur */
+		iframe {
+			width: 75%;
+			height: 500px;
+		}
+	}
+
+	@media only screen and (min-width: 992px) {
+		/* Pour les écrans de 992px ou plus de largeur */
+		iframe {
+			width: 50%;
+			height: 600px;
+		}
 	}
